@@ -1,3 +1,27 @@
-This is some sample code for the HappyDjango class in OSSF(Open Source Software Foundry) on 2010/8/21 & 22
+This is some sample codes for the HappyDjango class in OSSF(Open Source Software Foundry) on 2010/8/21 & 22
 
-author: eddie@adcube.com.tw
+environment:
+ubuntu 10.04
+python 2.6.5
+django 1.2.1
+
+features:
+*Member:
+-create account
+-account login / logout
+
+*BookStore:
+-list
+-view
+
+*admin site
+-build the CRUD function for the BookStore with Admin module
+
+for more information, please visit the OSSF website:
+http://www.openfoundry.org/
+
+--
+author: Eddie Kao
+email: eddie@adcube.com.tw
+blog: http://blog.eddie.com.tw
+facebook: http://www.facebook.com/eddiekao
