@@ -1,0 +1,12 @@
+{% extends 'common/template.htm' %}
+
+{% block body %}
+<h1>{{ book.title }}</h1>
+<ul>
+  <li>Author: {{ book.author }}</li>
+  <li>Price: ${{ book.cost }}</li>
+  <li>Content: {{ book.content }}</li>
+  <li>Publish Date: {{ book.publish_date }}</li>
+</ul>
+<a href="/books">BACK to list</a>
+{% endblock %}

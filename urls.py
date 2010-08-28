@@ -1,12 +1,18 @@
 from django.conf.urls.defaults import *
+from django.views.generic.simple import direct_to_template
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^happydjango/', include('happydjango.foo.urls')),
+    (r'^$', 'book.views.welcome'),
+    (r'^books/$', 'book.views.index'),
+    (r'^book/(?P<id>\d)$', 'book.views.detail'),
+    (r'^register/$', 'member.views.register'),
+    (r'^register/finish$', direct_to_template, {'template':'member/register_finish.htm'}),
+    (r'^login$', 'member.views.login'),
+    (r'^logout$', 'member.views.logout'),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:

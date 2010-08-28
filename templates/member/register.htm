@@ -1,0 +1,14 @@
+{% extends 'common/template.htm' %}
+
+{% block body %}
+<h1>Member Register</h1>
+<form name="/register" method="post" action="">
+{% for field in form %}{% csrf_token %}
+<div>
+  {{ field.label_tag }} : {{ field }}
+  {{ field.errors }}
+</div>
+{% endfor %}
+<input type="submit" value="Register!!" />
+</form>
+{% endblock %}

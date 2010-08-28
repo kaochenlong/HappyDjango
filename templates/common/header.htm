@@ -1,0 +1,10 @@
+<div style="background-color:#f0f0f0">
+<a href="/">Home</a> | 
+<a href="/books">Books</a> | 
+<a href="/register">Register</a> | 
+{% if login_info %}
+hello {{ login_info }}, <a href="/logout">Logout</a>
+{% else %}
+<a href="/login">Login</a>
+{% endif %}
+</div>

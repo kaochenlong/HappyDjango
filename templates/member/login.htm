@@ -1,0 +1,12 @@
+{% extends 'common/template.htm' %}
+
+{% block body %}
+<h1>Login</h1>
+<form name="login" method="post">{% csrf_token %}
+Login ID: <input type="text" name="login_id" /><br />
+Login PW: <input type="password" name="login_pw" /><br />
+<input type="submit" value="Login!" />
+</form>
+<br />
+if you don't have one, just <a href="/register">register</a> one now!
+{% endblock %}

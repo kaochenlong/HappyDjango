@@ -7,5 +7,8 @@ class Book(models.Model):
     publish_data = models.DateField()
     cost = models.IntegerField()
     
+    def __unicode__(self):
+        return self.author + ' - ' + self.title
+    
     class Meta:
         db_table = "book"

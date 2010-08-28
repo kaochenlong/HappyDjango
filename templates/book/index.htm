@@ -1,0 +1,10 @@
+{% extends 'common/template.htm' %}
+
+{% block body %}
+<h1>Book List</h1>
+<ul>
+{% for book in books %}
+<li><a href="/book/{{ book.id }}">{{ book.title }}</a>(by {{ book.author }})</li>
+{% endfor %}
+</ul>
+{% endblock %}
